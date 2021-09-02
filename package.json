@@ -26,6 +26,7 @@
     "aedes": "^0.46.1",
     "async-mqtt": "^2.6.1",
     "chokidar": "^3.5.2",
+    "jszip": "^3.7.1",
     "memdown": "^6.0.0"
   }
 }
