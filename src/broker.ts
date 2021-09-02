@@ -1,5 +1,5 @@
-import aedes from "aedes";
 import { createServer } from "net";
+import aedes from "aedes";
 
 const aedesInstance = aedes();
 const server = createServer(aedesInstance.handle);
