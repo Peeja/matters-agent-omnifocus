@@ -6,5 +6,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ]
+  ],
+  "rules": {
+    "arrow-body-style": "warn"
+  }
 }
