@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:4.30.0"],
             ["aedes", "npm:0.46.1"],
             ["async-mqtt", "npm:2.6.1"],
+            ["chokidar", "npm:3.5.2"],
             ["eslint", "npm:7.32.0"],
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["memdown", "npm:6.0.0"],
@@ -919,6 +920,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["anymatch", [
+        ["npm:3.1.2", {
+          "packageLocation": "./.yarn/cache/anymatch-npm-3.1.2-1d5471acfa-985163db22.zip/node_modules/anymatch/",
+          "packageDependencies": [
+            ["anymatch", "npm:3.1.2"],
+            ["normalize-path", "npm:3.0.0"],
+            ["picomatch", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["aproba", [
         ["npm:1.2.0", {
           "packageLocation": "./.yarn/cache/aproba-npm-1.2.0-34129f0778-0fca141966.zip/node_modules/aproba/",
@@ -1102,6 +1114,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["binary-extensions", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/binary-extensions-npm-2.2.0-180c33fec7-ccd267956c.zip/node_modules/binary-extensions/",
+          "packageDependencies": [
+            ["binary-extensions", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["bl", [
         ["npm:4.1.0", {
           "packageLocation": "./.yarn/cache/bl-npm-4.1.0-7f94cdcf3f-9e8521fa7e.zip/node_modules/bl/",
@@ -1268,6 +1289,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:4.1.2"],
             ["ansi-styles", "npm:4.3.0"],
             ["supports-color", "npm:7.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["chokidar", [
+        ["npm:3.5.2", {
+          "packageLocation": "./.yarn/cache/chokidar-npm-3.5.2-6752340fec-d1fda32fcd.zip/node_modules/chokidar/",
+          "packageDependencies": [
+            ["chokidar", "npm:3.5.2"],
+            ["anymatch", "npm:3.1.2"],
+            ["braces", "npm:3.0.2"],
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
+            ["glob-parent", "npm:5.1.2"],
+            ["is-binary-path", "npm:2.1.0"],
+            ["is-glob", "npm:4.0.1"],
+            ["normalize-path", "npm:3.0.0"],
+            ["readdirp", "npm:3.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2168,6 +2206,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["fsevents", [
+        ["patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7", {
+          "packageLocation": "./.yarn/unplugged/fsevents-patch-3340e2eb10/node_modules/fsevents/",
+          "packageDependencies": [
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
+            ["node-gyp", "npm:8.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["function-bind", [
         ["npm:1.1.1", {
           "packageLocation": "./.yarn/cache/function-bind-npm-1.1.1-b56b322ae9-b32fbaebb3.zip/node_modules/function-bind/",
@@ -2601,6 +2649,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["is-bigint", "npm:1.0.4"],
             ["has-bigints", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["is-binary-path", [
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/is-binary-path-npm-2.1.0-e61d46f557-84192eb88c.zip/node_modules/is-binary-path/",
+          "packageDependencies": [
+            ["is-binary-path", "npm:2.1.0"],
+            ["binary-extensions", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3150,6 +3208,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:4.30.0"],
             ["aedes", "npm:0.46.1"],
             ["async-mqtt", "npm:2.6.1"],
+            ["chokidar", "npm:3.5.2"],
             ["eslint", "npm:7.32.0"],
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["memdown", "npm:6.0.0"],
@@ -3487,6 +3546,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"],
             ["semver", "npm:5.7.1"],
             ["validate-npm-package-license", "npm:3.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["normalize-path", [
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/normalize-path-npm-3.0.0-658ba7d77f-88eeb4da89.zip/node_modules/normalize-path/",
+          "packageDependencies": [
+            ["normalize-path", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4060,6 +4128,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],
             ["string_decoder", "npm:1.3.0"],
             ["util-deprecate", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["readdirp", [
+        ["npm:3.6.0", {
+          "packageLocation": "./.yarn/cache/readdirp-npm-3.6.0-f950cc74ab-1ced032e6e.zip/node_modules/readdirp/",
+          "packageDependencies": [
+            ["readdirp", "npm:3.6.0"],
+            ["picomatch", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
