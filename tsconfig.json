@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
     "strict": true,
+    "exactOptionalPropertyTypes": true,
     "moduleResolution": "node",
     "module": "commonjs",
     "target": "es2020",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@rmlio/yarrrml-parser/lib/rml-generator": ["./src/yarrrml-parser"]
+    }
   }
 }
