@@ -28,6 +28,6 @@ void (async () => {
   await meld.write({ "@id": "hw2", message: "Hello World from clone 2!" });
 
   watchOmniFocus().subscribe((data) => {
-    console.log(data);
+    void meld.write(data);
   });
 })();
