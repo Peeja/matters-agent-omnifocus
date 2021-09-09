@@ -18,10 +18,6 @@ const omniFocusDatabasePath = join(
   "Library/Containers/com.omnigroup.OmniFocus3/Data/Library/Application Support/OmniFocus/OmniFocus.ofocus",
 );
 
-watchOmniFocus().subscribe((data) => {
-  console.log(data);
-});
-
 export default function watchOmniFocus(): Observable<JSONValue> {
   return fromEvent(
     watch(omniFocusDatabasePath, {
