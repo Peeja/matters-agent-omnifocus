@@ -55,12 +55,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.1.0"],
             ["jszip", "npm:3.7.1"],
-            ["lodash.memoize", "npm:4.1.2"],
+            ["lodash", "npm:4.17.21"],
             ["memdown", "npm:6.0.0"],
             ["n3", "npm:1.11.1"],
             ["prettier", "npm:2.3.2"],
             ["rdf-js", "npm:4.0.2"],
             ["rocketrml", "npm:1.11.3"],
+            ["rxjs", "npm:7.3.0"],
             ["ts-jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.0.5"],
             ["ts-node", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:10.2.1"],
             ["typescript", "patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=ddd1e8"]
@@ -6056,15 +6057,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["lodash.memoize", [
-        ["npm:4.1.2", {
-          "packageLocation": "./.yarn/cache/lodash.memoize-npm-4.1.2-0e6250041f-9ff3942fee.zip/node_modules/lodash.memoize/",
-          "packageDependencies": [
-            ["lodash.memoize", "npm:4.1.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["lodash.merge", [
         ["npm:4.6.2", {
           "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-ad580b4bdb.zip/node_modules/lodash.merge/",
@@ -6215,12 +6207,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.1.0"],
             ["jszip", "npm:3.7.1"],
-            ["lodash.memoize", "npm:4.1.2"],
+            ["lodash", "npm:4.17.21"],
             ["memdown", "npm:6.0.0"],
             ["n3", "npm:1.11.1"],
             ["prettier", "npm:2.3.2"],
             ["rdf-js", "npm:4.0.2"],
             ["rocketrml", "npm:1.11.3"],
+            ["rxjs", "npm:7.3.0"],
             ["ts-jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.0.5"],
             ["ts-node", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:10.2.1"],
             ["typescript", "patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=ddd1e8"]

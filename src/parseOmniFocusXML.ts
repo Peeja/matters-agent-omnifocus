@@ -1,4 +1,5 @@
-import memoize from "lodash.memoize";
+import { JSONValue } from "./types";
+import { memoize } from "lodash";
 import YarrrmlParser from "@rmlio/yarrrml-parser/lib/rml-generator";
 
 import { Writer as N3Writer } from "n3";
@@ -41,15 +42,6 @@ const yarrrmlParse = memoize(
       });
     }),
 );
-
-// From: https://github.com/Microsoft/TypeScript/issues/1897#issuecomment-822032151
-type JSONValue =
-  | string
-  | number
-  | boolean
-  | null
-  | JSONValue[]
-  | { [key: string]: JSONValue };
 
 export const parseOmniFocusXML = async (
   updateXML: string,

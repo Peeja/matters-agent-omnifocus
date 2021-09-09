@@ -36,10 +36,11 @@
     "async-mqtt": "^2.6.1",
     "chokidar": "^3.5.2",
     "jszip": "^3.7.1",
-    "lodash.memoize": "^4.1.2",
+    "lodash": "^4.17.21",
     "memdown": "^6.0.0",
     "n3": "^1.11.1",
-    "rocketrml": "^1.11.3"
+    "rocketrml": "^1.11.3",
+    "rxjs": "^7.3.0"
   },
   "resolutions": {
     "xpath-iterator": "https://github.com/ThibaultGerrier/XpathIterator.git#commit=647ba7c2973b3feadcc010f83f7086fe043e0810"
