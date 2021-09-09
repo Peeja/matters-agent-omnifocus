@@ -1,3 +1,4 @@
+import watchOmniFocus from "./watchOmniFocus";
 import MemDown from "memdown";
 import { clone, uuid } from "@m-ld/m-ld";
 import { MqttRemotes } from "@m-ld/m-ld/dist/mqtt";
@@ -26,5 +27,7 @@ void (async () => {
 
   await meld.write({ "@id": "hw2", message: "Hello World from clone 2!" });
 
-  // ...
+  watchOmniFocus().subscribe((data) => {
+    void meld.write(data);
+  });
 })();
