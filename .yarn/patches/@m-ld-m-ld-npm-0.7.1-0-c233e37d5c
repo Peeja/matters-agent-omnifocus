@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 691f3955589c6ec16e1a16c2bd1e8f495dfd606f..70a585dd311ede940698723faba2231c57d50035 100644
+--- a/package.json
++++ b/package.json
+@@ -9,6 +9,7 @@ Add export matching real path for TS <4.5 compatibility.
+     "./dist/mqtt": "./dist/mqtt/index.js",
+     "./dist/socket.io": "./dist/socket.io/index.js",
+     "./dist/socket.io-server": "./dist/socket.io/server/index.js",
++    "./dist/socket.io/server": "./dist/socket.io/server/index.js",
+     "./dist/ably": "./dist/ably/index.js",
+     "./dist/wrtc": "./dist/wrtc/index.js"
+   },
