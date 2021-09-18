@@ -1,15 +1,26 @@
-import { createServer } from "net";
-import aedes from "aedes";
+import http from "http";
+import socket from "socket.io";
+import express from "express";
+import { IoRemotesService } from "@m-ld/m-ld/dist/socket.io/server";
 
-const aedesInstance = aedes();
-const server = createServer(aedesInstance.handle);
-const port = 1883;
+const app = express();
+const httpServer = http.createServer(app);
 
-server.listen(port, () => {
-  console.log("MQTT broker started and listening on port ", port);
-  process.send && process.send("started");
+// Start the Socket.io server, and attach the m-ld message-passing service
+const io = new socket.Server(httpServer, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
 });
 
-aedesInstance.on("client", (client) => {
-  console.log("MQTT client connected", client.id);
+new IoRemotesService(io.sockets)
+  // The m-ld service provides some debugging information
+  .on("error", console.error)
+  .on("debug", console.debug);
+
+const port = 4000;
+httpServer.listen(port, () => {
+  console.log(`Broker listening at http://localhost:${port}`);
+  process.send && process.send("started");
 });
