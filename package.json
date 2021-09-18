@@ -30,7 +30,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@m-ld/m-ld": "patch:@m-ld/m-ld@npm:0.7.1-0#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c",
+    "@m-ld/m-ld": "patch:@m-ld/m-ld@npm:0.7.1-1#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c",
     "@rmlio/yarrrml-parser": "^1.3.1",
     "@types/memdown": "^3.0.0",
     "chokidar": "^3.5.2",

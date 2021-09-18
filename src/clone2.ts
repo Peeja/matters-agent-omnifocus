@@ -1,10 +1,7 @@
 import watchOmniFocus from "./watchOmniFocus";
 import MemDown from "memdown";
 import { clone, uuid } from "@m-ld/m-ld";
-import { IoRemotes } from "@m-ld/m-ld/dist/socket.io";
-// Should be in the above import, but MeldIoConfig was erroneously left out of
-// the barrel module. Fixed in https://github.com/m-ld/m-ld-js/pull/77.
-import { MeldIoConfig } from "@m-ld/m-ld/dist/socket.io/IoRemotes";
+import { IoRemotes, MeldIoConfig } from "@m-ld/m-ld/dist/socket.io";
 
 const config: MeldIoConfig = {
   "@id": uuid(),
