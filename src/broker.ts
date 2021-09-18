@@ -21,6 +21,6 @@ new IoRemotesService(io.sockets)
 
 const port = 4000;
 httpServer.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Broker listening at http://localhost:${port}`);
   process.send && process.send("started");
 });

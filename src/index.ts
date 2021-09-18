@@ -9,6 +9,5 @@ const started = (childProcess: ChildProcess) =>
 
 void (async () => {
   await started(fork("src/broker"));
-  await started(fork("src/clone1"));
-  fork("src/clone2");
+  fork("src/agent");
 })();
