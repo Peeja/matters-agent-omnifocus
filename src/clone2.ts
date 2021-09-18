@@ -7,7 +7,7 @@ const config: MeldIoConfig = {
   "@id": uuid(),
   "@domain": "test.example.org",
   genesis: false, // This clone needs clone 1 to have started
-  io: { uri: "http://localhost:3000" },
+  io: { uri: "http://localhost:4000" },
 };
 
 void (async () => {

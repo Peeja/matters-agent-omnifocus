@@ -7,13 +7,19 @@ const app = express();
 const httpServer = http.createServer(app);
 
 // Start the Socket.io server, and attach the m-ld message-passing service
-const io = new socket.Server(httpServer);
+const io = new socket.Server(httpServer, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
+
 new IoRemotesService(io.sockets)
   // The m-ld service provides some debugging information
   .on("error", console.error)
   .on("debug", console.debug);
 
-const port = 3000;
+const port = 4000;
 httpServer.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
   process.send && process.send("started");

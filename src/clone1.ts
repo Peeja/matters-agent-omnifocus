@@ -6,7 +6,7 @@ const config: MeldIoConfig = {
   "@id": uuid(),
   "@domain": "test.example.org",
   genesis: true,
-  io: { uri: "http://localhost:3000" },
+  io: { uri: "http://localhost:4000" },
 };
 
 void (async () => {
