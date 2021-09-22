@@ -54,7 +54,9 @@ const update = (subjects: Subject[]): Update => {
 void (async () => {
   const meld = await clone(new MemDown(), IoRemotes, config);
 
-  watchOmniFocus().subscribe(async (data) => {
+  watchOmniFocus().subscribe(async ([version, data]) => {
+    console.log("Reading version:", version);
+
     try {
       await meld.write(update(data as Subject[]));
     } catch (e) {
