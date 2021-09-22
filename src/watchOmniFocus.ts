@@ -7,7 +7,7 @@ import { JSONValue } from "./types";
 import { isString } from "lodash";
 import JSZip from "jszip";
 import { watch } from "chokidar";
-import { concatMap, filter, fromEvent, map, Observable } from "rxjs";
+import { concatMap, filter, fromEvent, Observable } from "rxjs";
 
 const homeDir = process.env.HOME;
 
@@ -26,11 +26,15 @@ export default function watchOmniFocus(): Observable<JSONValue> {
     "add",
   ).pipe(
     filter(isString),
-    concatMap((path) => fs.readFile(path)),
-    concatMap((data) => JSZip.loadAsync(data)),
-    map((zip) => zip.file("contents.xml")),
+    concatMap(async (path) => {
+      const data = await fs.readFile(path);
+      const zip = await JSZip.loadAsync(data);
+      const zipObject = zip.file("contents.xml");
+
+      if (zipObject) {
+        return parseOmniFocusXML(await zipObject.async("text"));
+      }
+    }),
     filter(Boolean),
-    concatMap((zipObject) => zipObject.async("text")),
-    concatMap(parseOmniFocusXML),
   );
 }
