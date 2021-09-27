@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["express", "npm:4.17.1"],
             ["jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.1.0"],
+            ["jest-mock-extended", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.0.4"],
             ["jszip", "npm:3.7.1"],
             ["lodash", "npm:4.17.21"],
             ["memdown", "npm:6.0.0"],
@@ -5696,6 +5697,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["jest-mock-extended", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/cache/jest-mock-extended-npm-2.0.4-c99251eff4-0e3b6ecbb0.zip/node_modules/jest-mock-extended/",
+          "packageDependencies": [
+            ["jest-mock-extended", "npm:2.0.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.0.4", {
+          "packageLocation": "./.yarn/__virtual__/jest-mock-extended-virtual-81ff8d261b/0/cache/jest-mock-extended-npm-2.0.4-c99251eff4-0e3b6ecbb0.zip/node_modules/jest-mock-extended/",
+          "packageDependencies": [
+            ["jest-mock-extended", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.0.4"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/typescript", null],
+            ["jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.1.0"],
+            ["ts-essentials", "virtual:81ff8d261b450e2afc6e402fbfb0d33e564e56a6cd99263f6fa1072d779b7c674516013db768e3a2bb3309a334066bf2cc3583304654f94e8a250f1f757d57d2#npm:7.0.3"],
+            ["typescript", "patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=ddd1e8"]
+          ],
+          "packagePeers": [
+            "@types/jest",
+            "@types/typescript",
+            "jest",
+            "typescript"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["jest-pnp-resolver", [
         ["npm:1.2.2", {
           "packageLocation": "./.yarn/cache/jest-pnp-resolver-npm-1.2.2-da20f8bdfe-bd85dcc0e7.zip/node_modules/jest-pnp-resolver/",
@@ -6472,6 +6500,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.24.2"],
             ["express", "npm:4.17.1"],
             ["jest", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:27.1.0"],
+            ["jest-mock-extended", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:2.0.4"],
             ["jszip", "npm:3.7.1"],
             ["lodash", "npm:4.17.21"],
             ["memdown", "npm:6.0.0"],
@@ -8851,6 +8880,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["tr46", "npm:2.1.0"],
             ["punycode", "npm:2.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ts-essentials", [
+        ["npm:7.0.3", {
+          "packageLocation": "./.yarn/cache/ts-essentials-npm-7.0.3-dbefe5cb3b-74d75868ac.zip/node_modules/ts-essentials/",
+          "packageDependencies": [
+            ["ts-essentials", "npm:7.0.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:81ff8d261b450e2afc6e402fbfb0d33e564e56a6cd99263f6fa1072d779b7c674516013db768e3a2bb3309a334066bf2cc3583304654f94e8a250f1f757d57d2#npm:7.0.3", {
+          "packageLocation": "./.yarn/__virtual__/ts-essentials-virtual-41be5981a7/0/cache/ts-essentials-npm-7.0.3-dbefe5cb3b-74d75868ac.zip/node_modules/ts-essentials/",
+          "packageDependencies": [
+            ["ts-essentials", "virtual:81ff8d261b450e2afc6e402fbfb0d33e564e56a6cd99263f6fa1072d779b7c674516013db768e3a2bb3309a334066bf2cc3583304654f94e8a250f1f757d57d2#npm:7.0.3"],
+            ["@types/typescript", null],
+            ["typescript", "patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=ddd1e8"]
+          ],
+          "packagePeers": [
+            "@types/typescript",
+            "typescript"
           ],
           "linkType": "HARD",
         }]
