@@ -62,4 +62,29 @@ describe("upsert()", () => {
       { "@id": "http://www.example.com/foo", aProperty: "new-value" },
     ]);
   });
+
+  it("updates when there is an existing value", async () => {
+    const meld = await testClone({
+      "@id": "http://www.example.com/foo",
+      aProperty: "existing-value",
+    });
+
+    await meld.write(
+      upsert([
+        {
+          "@id": "http://www.example.com/foo",
+          aProperty: "new-value",
+        },
+      ]),
+    );
+
+    expect(
+      await meld.read({
+        "@describe": "?id",
+        "@where": { "@id": "?id" },
+      }),
+    ).toEqual([
+      { "@id": "http://www.example.com/foo", aProperty: "new-value" },
+    ]);
+  });
 });
