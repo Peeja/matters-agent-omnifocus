@@ -12,18 +12,8 @@ function mockRemotes(): MeldRemotes {
     setLocal: () => {
       /* noop */
     },
-    live: hotLive([false]),
+    live: new BehaviorSubject(null),
   };
-}
-
-function hotLive(
-  lives: Array<boolean | null>,
-): BehaviorSubject<boolean | null> {
-  const live = new BehaviorSubject(lives[0]);
-  void from(lives.slice(1))
-    .pipe(observeOn(asapScheduler))
-    .forEach((v) => live.next(v));
-  return live;
 }
 
 function testConfig(config?: Partial<MeldConfig>): MeldConfig {
