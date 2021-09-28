@@ -1,9 +1,10 @@
 import { upsert } from "./upsert";
 import { mock } from "jest-mock-extended";
 import { MeldRemotes } from "@m-ld/m-ld/dist/engine";
-import { clone, MeldConfig, Subject } from "@m-ld/m-ld";
+import { clone, MeldConfig, MeldReadState, Subject } from "@m-ld/m-ld";
 import MemDown from "memdown";
 import { asapScheduler, BehaviorSubject, from, observeOn } from "rxjs";
+import { sortBy } from "lodash";
 
 function mockRemotes(): MeldRemotes {
   return {
@@ -40,6 +41,17 @@ async function testClone(initialData?: Subject | Subject[]) {
   return meld;
 }
 
+/** Read all data in `state`, sorted for stability in test expectations. */
+async function readAll(state: MeldReadState) {
+  return sortBy(
+    await state.read({
+      "@describe": "?id",
+      "@where": { "@id": "?id" },
+    }),
+    "@id",
+  );
+}
+
 describe("upsert()", () => {
   it("inserts when there is no existing value", async () => {
     const meld = await testClone();
@@ -53,12 +65,7 @@ describe("upsert()", () => {
       ]),
     );
 
-    expect(
-      await meld.read({
-        "@describe": "?id",
-        "@where": { "@id": "?id" },
-      }),
-    ).toEqual([
+    expect(await readAll(meld)).toEqual([
       { "@id": "http://www.example.com/foo", aProperty: "new-value" },
     ]);
   });
@@ -78,13 +85,41 @@ describe("upsert()", () => {
       ]),
     );
 
-    expect(
-      await meld.read({
-        "@describe": "?id",
-        "@where": { "@id": "?id" },
-      }),
-    ).toEqual([
+    expect(await readAll(meld)).toEqual([
       { "@id": "http://www.example.com/foo", aProperty: "new-value" },
+    ]);
+  });
+
+  it("leaves other subjects' properties alone", async () => {
+    const meld = await testClone([
+      {
+        "@id": "http://www.example.com/foo",
+        aProperty: "existing-value",
+      },
+      {
+        "@id": "http://www.example.com/bar",
+        aProperty: "another-existing-value",
+      },
+    ]);
+
+    await meld.write(
+      upsert([
+        {
+          "@id": "http://www.example.com/foo",
+          aProperty: "new-value",
+        },
+      ]),
+    );
+
+    expect(await readAll(meld)).toEqual([
+      {
+        "@id": "http://www.example.com/bar",
+        aProperty: "another-existing-value",
+      },
+      {
+        "@id": "http://www.example.com/foo",
+        aProperty: "new-value",
+      },
     ]);
   });
 });

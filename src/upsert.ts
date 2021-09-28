@@ -6,8 +6,13 @@ export const upsert =
     const existingData = await state.read<Construct>({
       "@construct": { "@id": "?id", "?property": "?value" },
       "@where": {
-        "@id": "?id",
-        "?property": "?value",
+        "@graph": {
+          "@id": "?id",
+          "?property": "?value",
+        },
+        "@values": subjects.map((subject) => ({
+          "?id": { "@id": subject["@id"] },
+        })),
       },
     });
 
