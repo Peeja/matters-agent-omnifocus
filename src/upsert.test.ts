@@ -50,44 +50,44 @@ describe("upsert()", () => {
       upsert(
         [
           {
-            "@id": "http://www.example.com/foo",
-            "http://www.example.com/aProperty": "new-value",
+            "@id": "foo",
+            aProperty: "new-value",
           },
         ],
-        ["http://www.example.com/aProperty"],
+        ["aProperty"],
       ),
     );
 
     expect(await readAll(meld)).toEqual([
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "new-value",
+        "@id": "foo",
+        aProperty: "new-value",
       },
     ]);
   });
 
   it("updates when there is an existing value", async () => {
     const meld = await testClone({
-      "@id": "http://www.example.com/foo",
-      "http://www.example.com/aProperty": "existing-value",
+      "@id": "foo",
+      aProperty: "existing-value",
     });
 
     await meld.write(
       upsert(
         [
           {
-            "@id": "http://www.example.com/foo",
-            "http://www.example.com/aProperty": "new-value",
+            "@id": "foo",
+            aProperty: "new-value",
           },
         ],
-        ["http://www.example.com/aProperty"],
+        ["aProperty"],
       ),
     );
 
     expect(await readAll(meld)).toEqual([
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "new-value",
+        "@id": "foo",
+        aProperty: "new-value",
       },
     ]);
   });
@@ -95,12 +95,12 @@ describe("upsert()", () => {
   it("leaves other subjects' properties alone", async () => {
     const meld = await testClone([
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "existing-value",
+        "@id": "foo",
+        aProperty: "existing-value",
       },
       {
-        "@id": "http://www.example.com/bar",
-        "http://www.example.com/aProperty": "another-existing-value",
+        "@id": "bar",
+        aProperty: "another-existing-value",
       },
     ]);
 
@@ -108,102 +108,80 @@ describe("upsert()", () => {
       upsert(
         [
           {
-            "@id": "http://www.example.com/foo",
-            "http://www.example.com/aProperty": "new-value",
+            "@id": "foo",
+            aProperty: "new-value",
           },
         ],
-        ["http://www.example.com/aProperty"],
+        ["aProperty"],
       ),
     );
 
     expect(await readAll(meld)).toEqual([
       {
-        "@id": "http://www.example.com/bar",
-        "http://www.example.com/aProperty": "another-existing-value",
+        "@id": "bar",
+        aProperty: "another-existing-value",
       },
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "new-value",
+        "@id": "foo",
+        aProperty: "new-value",
       },
     ]);
   });
 
   it("leaves non-inserted properties alone", async () => {
     const meld = await testClone({
-      "@id": "http://www.example.com/foo",
-      "http://www.example.com/aProperty": "existing-value",
-      "http://www.example.com/anotherProperty": "another-existing-value",
+      "@id": "foo",
+      aProperty: "existing-value",
+      anotherProperty: "another-existing-value",
     });
 
     await meld.write(
       upsert(
         [
           {
-            "@id": "http://www.example.com/foo",
-            "http://www.example.com/aProperty": "new-value",
+            "@id": "foo",
+            aProperty: "new-value",
           },
         ],
-        [
-          "http://www.example.com/aProperty",
-          "http://www.example.com/anotherProperty",
-        ],
+        ["aProperty", "anotherProperty"],
       ),
     );
 
     expect(await readAll(meld)).toEqual([
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "new-value",
-        "http://www.example.com/anotherProperty": "another-existing-value",
+        "@id": "foo",
+        aProperty: "new-value",
+        anotherProperty: "another-existing-value",
       },
     ]);
   });
 
   it("leaves non-single-valued properties alone", async () => {
     const meld = await testClone({
-      "@id": "http://www.example.com/foo",
-      "http://www.example.com/aProperty": "existing-value",
-      "http://www.example.com/anotherProperty": "another-existing-value",
+      "@id": "foo",
+      aProperty: "existing-value",
+      anotherProperty: "another-existing-value",
     });
 
     await meld.write(
       upsert(
         [
           {
-            "@id": "http://www.example.com/foo",
-            "http://www.example.com/aProperty": "new-value",
-            "http://www.example.com/anotherProperty": "another-new-value",
+            "@id": "foo",
+            aProperty: "new-value",
+            anotherProperty: "another-new-value",
           },
         ],
-        ["http://www.example.com/aProperty"],
+        ["aProperty"],
       ),
     );
 
     expect(await readAll(meld)).toEqual([
       {
-        "@id": "http://www.example.com/foo",
-        "http://www.example.com/aProperty": "new-value",
-        "http://www.example.com/anotherProperty": [
-          "another-existing-value",
-          "another-new-value",
-        ],
+        "@id": "foo",
+        aProperty: "new-value",
+        anotherProperty: ["another-existing-value", "another-new-value"],
       },
     ]);
-  });
-
-  it("doesn't support non-IRI properties", () => {
-    expect(() =>
-      upsert(
-        [
-          {
-            "@id": "http://www.example.com/foo",
-            aProperty: "new-value",
-          },
-        ],
-        ["aProperty"],
-      ),
-    ).toThrow(
-      "upsert() does not yet support non-IRI properties, but got aProperty",
-    );
   });
 });

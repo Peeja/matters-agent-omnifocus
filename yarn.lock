@@ -732,9 +732,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@m-ld/m-ld@npm:0.7.1-1":
-  version: 0.7.1-1
-  resolution: "@m-ld/m-ld@npm:0.7.1-1"
+"@m-ld/m-ld@npm:0.7.1-3":
+  version: 0.7.1-3
+  resolution: "@m-ld/m-ld@npm:0.7.1-3"
   dependencies:
     "@ably/msgpack-js": ^0.4.0
     "@m-ld/m-ld-spec": ^0.6.3
@@ -776,13 +776,13 @@ __metadata:
       optional: true
     socket.io-client:
       optional: true
-  checksum: 45702bf15b0d4d285a6305594881da47a81525b06a7df7ef99b3e4b5110632c54f3f8b49e4dd8e541f7e3513879bb794ea499b49eb7c6caa2e54888407b0e8c4
+  checksum: ef4ba7ff8feb1b414818f0874b635c3bc1cea1d92c3112fab34b10519238f144e37fbff17d57944058d92b9d1682c3b269b07474ab3e7e7f2f242e6088096977
   languageName: node
   linkType: hard
 
-"@m-ld/m-ld@patch:@m-ld/m-ld@npm:0.7.1-1#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c::locator=matters-agent-omnifocus%40workspace%3A.":
-  version: 0.7.1-1
-  resolution: "@m-ld/m-ld@patch:@m-ld/m-ld@npm%3A0.7.1-1#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c::version=0.7.1-1&hash=bff1e3&locator=matters-agent-omnifocus%40workspace%3A."
+"@m-ld/m-ld@patch:@m-ld/m-ld@npm:0.7.1-3#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c::locator=matters-agent-omnifocus%40workspace%3A.":
+  version: 0.7.1-3
+  resolution: "@m-ld/m-ld@patch:@m-ld/m-ld@npm%3A0.7.1-3#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c::version=0.7.1-3&hash=bff1e3&locator=matters-agent-omnifocus%40workspace%3A."
   dependencies:
     "@ably/msgpack-js": ^0.4.0
     "@m-ld/m-ld-spec": ^0.6.3
@@ -824,7 +824,7 @@ __metadata:
       optional: true
     socket.io-client:
       optional: true
-  checksum: 2983f06e383a969956fc5627f34c86799856615e25944ca29d0ea0fc55a18873ec20c174096077c408d51df0b6ef0d46bb2b0c5d1aabd0584e01ef24b43c48bb
+  checksum: a62cf4fcf068744a7277d110b04eb049a9eb3075f23ca6b78673d6e7c7f17469f76825922f1a92c8161c781621ceb9fd23a910f6fd1813da8904438f81dbf6f7
   languageName: node
   linkType: hard
 
@@ -5271,7 +5271,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "matters-agent-omnifocus@workspace:."
   dependencies:
-    "@m-ld/m-ld": "patch:@m-ld/m-ld@npm:0.7.1-1#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c"
+    "@m-ld/m-ld": "patch:@m-ld/m-ld@npm:0.7.1-3#.yarn/patches/@m-ld-m-ld-npm-0.7.1-0-c233e37d5c"
     "@rmlio/yarrrml-parser": ^1.3.1
     "@types/eslint": ^7
     "@types/express": ^4
