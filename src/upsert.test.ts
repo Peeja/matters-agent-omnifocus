@@ -3,7 +3,7 @@ import { mock } from "jest-mock-extended";
 import { MeldRemotes } from "@m-ld/m-ld/dist/engine";
 import { clone, MeldConfig, MeldReadState, Subject } from "@m-ld/m-ld";
 import MemDown from "memdown";
-import { asapScheduler, BehaviorSubject, from, observeOn } from "rxjs";
+import { BehaviorSubject } from "rxjs";
 import { sortBy } from "lodash";
 
 function mockRemotes(): MeldRemotes {
@@ -50,33 +50,39 @@ describe("upsert()", () => {
       upsert([
         {
           "@id": "http://www.example.com/foo",
-          aProperty: "new-value",
+          "http://www.example.com/aProperty": "new-value",
         },
       ]),
     );
 
     expect(await readAll(meld)).toEqual([
-      { "@id": "http://www.example.com/foo", aProperty: "new-value" },
+      {
+        "@id": "http://www.example.com/foo",
+        "http://www.example.com/aProperty": "new-value",
+      },
     ]);
   });
 
   it("updates when there is an existing value", async () => {
     const meld = await testClone({
       "@id": "http://www.example.com/foo",
-      aProperty: "existing-value",
+      "http://www.example.com/aProperty": "existing-value",
     });
 
     await meld.write(
       upsert([
         {
           "@id": "http://www.example.com/foo",
-          aProperty: "new-value",
+          "http://www.example.com/aProperty": "new-value",
         },
       ]),
     );
 
     expect(await readAll(meld)).toEqual([
-      { "@id": "http://www.example.com/foo", aProperty: "new-value" },
+      {
+        "@id": "http://www.example.com/foo",
+        "http://www.example.com/aProperty": "new-value",
+      },
     ]);
   });
 
@@ -84,11 +90,11 @@ describe("upsert()", () => {
     const meld = await testClone([
       {
         "@id": "http://www.example.com/foo",
-        aProperty: "existing-value",
+        "http://www.example.com/aProperty": "existing-value",
       },
       {
         "@id": "http://www.example.com/bar",
-        aProperty: "another-existing-value",
+        "http://www.example.com/aProperty": "another-existing-value",
       },
     ]);
 
@@ -96,7 +102,7 @@ describe("upsert()", () => {
       upsert([
         {
           "@id": "http://www.example.com/foo",
-          aProperty: "new-value",
+          "http://www.example.com/aProperty": "new-value",
         },
       ]),
     );
@@ -104,12 +110,50 @@ describe("upsert()", () => {
     expect(await readAll(meld)).toEqual([
       {
         "@id": "http://www.example.com/bar",
-        aProperty: "another-existing-value",
+        "http://www.example.com/aProperty": "another-existing-value",
       },
       {
         "@id": "http://www.example.com/foo",
-        aProperty: "new-value",
+        "http://www.example.com/aProperty": "new-value",
       },
     ]);
+  });
+
+  it("leaves non-inserted properties alone", async () => {
+    const meld = await testClone({
+      "@id": "http://www.example.com/foo",
+      "http://www.example.com/aProperty": "existing-value",
+      "http://www.example.com/anotherProperty": "another-existing-value",
+    });
+
+    await meld.write(
+      upsert([
+        {
+          "@id": "http://www.example.com/foo",
+          "http://www.example.com/aProperty": "new-value",
+        },
+      ]),
+    );
+
+    expect(await readAll(meld)).toEqual([
+      {
+        "@id": "http://www.example.com/foo",
+        "http://www.example.com/aProperty": "new-value",
+        "http://www.example.com/anotherProperty": "another-existing-value",
+      },
+    ]);
+  });
+
+  it("doesn't support non-IRI properties", () => {
+    expect(() =>
+      upsert([
+        {
+          "@id": "http://www.example.com/foo",
+          aProperty: "new-value",
+        },
+      ]),
+    ).toThrow(
+      "upsert() does not yet support non-IRI properties, but got aProperty",
+    );
   });
 });
