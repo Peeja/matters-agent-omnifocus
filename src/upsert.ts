@@ -10,17 +10,19 @@ function assertIRI(key: string) {
   }
 }
 
-export const upsert = (subjects: Subject[]): StateProc<MeldClone> => {
+export const upsert = (
+  subjects: Subject[],
+  singleValuedProperties: string[],
+): StateProc<MeldClone> => {
+  singleValuedProperties.forEach(assertIRI);
+
   const values = subjects.flatMap((subject) =>
     Object.keys(subject)
-      .filter((key) => key != "@id")
-      .map((key) => {
-        assertIRI(key);
-        return {
-          "?id": { "@id": subject["@id"] },
-          "?property": { "@id": key },
-        };
-      }),
+      .filter((key) => key != "@id" && singleValuedProperties.includes(key))
+      .map((key) => ({
+        "?id": { "@id": subject["@id"] },
+        "?property": { "@id": key },
+      })),
   );
 
   return async (state) => {
