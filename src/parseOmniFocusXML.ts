@@ -1,10 +1,10 @@
-import { JSONValue } from "./types";
 import { memoize } from "lodash";
 import YarrrmlParser from "@rmlio/yarrrml-parser/lib/rml-generator";
 
 import { Writer as N3Writer } from "n3";
 
 import rocketrml from "rocketrml";
+import { Subject } from "@m-ld/m-ld";
 
 const yaml = `
 prefixes:
@@ -45,9 +45,9 @@ const yarrrmlParse = memoize(
 
 export const parseOmniFocusXML = async (
   updateXML: string,
-): Promise<JSONValue> =>
+): Promise<Subject[]> =>
   rocketrml.parseFileLive(
     await yarrrmlParse(yaml),
     { input: updateXML },
     { xpathLib: "fontoxpath" },
-  ) as Promise<JSONValue>;
+  ) as Promise<Subject[]>;
