@@ -32,3 +32,5 @@ void (async () => {
     }
   });
 })();
+
+// BOOKMARK: Read all properties

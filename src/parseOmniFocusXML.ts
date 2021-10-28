@@ -10,23 +10,31 @@ const yaml = `
 prefixes:
   omnifocus: http://peeja.com/purl/matters/omnifocus/
 mappings:
-  person:
+  task:
     sources:
       - ["input~xpath", "/omnifocus/task"]
 
-    subjects: "omnifocus:task/$(./@id)"
+    subjects: "omnifocus:task/$(@id)"
     predicateobjects:
+      - predicates: omnifocus:o/inbox
+        objects:
+          value: "$(inbox)"
+          datatype: xsd:boolean
+
+
+
+
       - predicates: omnifocus:o/added
         objects:
-          value: "$(./added)"
+          value: "$(added)"
           datatype: xsd:dateTimeStamp
       - predicates: omnifocus:o/modified
         objects:
-          value: "$(./modified)"
+          value: "$(modified)"
           datatype: xsd:dateTimeStamp
       - predicates: omnifocus:o/completed
         objects:
-          value: "$(./completed)"
+          value: "$(completed)"
           datatype: xsd:dateTimeStamp
 `;
 
@@ -49,5 +57,9 @@ export const parseOmniFocusXML = async (
   rocketrml.parseFileLive(
     await yarrrmlParse(yaml),
     { input: updateXML },
-    { xpathLib: "fontoxpath" },
+    {
+      removeNameSpace: {
+        xmlns: "http://www.omnigroup.com/namespace/OmniFocus/v2",
+      },
+    },
   ) as Promise<Subject[]>;
