@@ -1900,6 +1900,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@typescript-eslint/eslint-plugin", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:4.30.0"],
             ["@types/eslint", "npm:7.28.0"],
+            ["@types/typescript", null],
             ["@types/typescript-eslint__parser", null],
             ["@typescript-eslint/experimental-utils", "virtual:fd82da74b9db9d01fa0e1679e43334f7a3cbb7254bd18f2b382405bfc45a6bc556009fbc58cf1d25eb1f3631f12ebea61f64d1738ad23d19066dac0945e2894b#npm:4.30.0"],
             ["@typescript-eslint/parser", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:4.30.0"],
@@ -1915,6 +1916,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/eslint",
             "@types/typescript-eslint__parser",
+            "@types/typescript",
             "@typescript-eslint/parser",
             "eslint",
             "typescript"
@@ -1963,6 +1965,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@typescript-eslint/parser", "virtual:2691d7f162ec7a2b9609275ca6083f02b3381d5aba5cacb48ead22ebdf0a60a0a4b3b5310774826049146493aef15d2e131151e83969cd2361de346e896b46f0#npm:4.30.0"],
             ["@types/eslint", "npm:7.28.0"],
+            ["@types/typescript", null],
             ["@typescript-eslint/scope-manager", "npm:4.30.0"],
             ["@typescript-eslint/types", "npm:4.30.0"],
             ["@typescript-eslint/typescript-estree", "virtual:25ea2e8f19be2a3c6d279229ff9de1271281dacb68f3b64c3c074c20b25e1bd882677ac92b4c0feb02d509b1a9784948ad99827a79bbe2ae5d3ceff313b26f78#npm:4.30.0"],
@@ -1972,6 +1975,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "packagePeers": [
             "@types/eslint",
+            "@types/typescript",
             "eslint",
             "typescript"
           ],
@@ -2010,6 +2014,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-d11ab0cec3/0/cache/@typescript-eslint-typescript-estree-npm-4.30.0-aa0dd81355-e35410e33b.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
             ["@typescript-eslint/typescript-estree", "virtual:25ea2e8f19be2a3c6d279229ff9de1271281dacb68f3b64c3c074c20b25e1bd882677ac92b4c0feb02d509b1a9784948ad99827a79bbe2ae5d3ceff313b26f78#npm:4.30.0"],
+            ["@types/typescript", null],
             ["@typescript-eslint/types", "npm:4.30.0"],
             ["@typescript-eslint/visitor-keys", "npm:4.30.0"],
             ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.2"],
@@ -2020,6 +2025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=ddd1e8"]
           ],
           "packagePeers": [
+            "@types/typescript",
             "typescript"
           ],
           "linkType": "HARD",
@@ -2028,6 +2034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-540d256e52/0/cache/@typescript-eslint-typescript-estree-npm-4.30.0-aa0dd81355-e35410e33b.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
             ["@typescript-eslint/typescript-estree", "virtual:6eff0e86cbec613ea9543b215afa67d82cb075f711662ab37e1d717f8927a798278e33867e246d66cda2a41d3b793aed79f73dfc7d17b490864443305ca1953f#npm:4.30.0"],
+            ["@types/typescript", null],
             ["@typescript-eslint/types", "npm:4.30.0"],
             ["@typescript-eslint/visitor-keys", "npm:4.30.0"],
             ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.2"],
@@ -2038,6 +2045,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", null]
           ],
           "packagePeers": [
+            "@types/typescript",
             "typescript"
           ],
           "linkType": "HARD",
@@ -3349,10 +3357,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-e152771b72/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.2"],
+            ["@types/supports-color", null],
             ["ms", "npm:2.1.2"],
             ["supports-color", null]
           ],
           "packagePeers": [
+            "@types/supports-color",
             "supports-color"
           ],
           "linkType": "HARD",
@@ -3361,10 +3371,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-53242bdd6a/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:6e177cabfad012f413f9c41366539c04d8701f0567119998690ab02224012faa99ec3a16b9f74f4d7920ab472c12b3e70f47f8f143239c06d0e2569e60ed9f62#npm:2.6.9"],
+            ["@types/supports-color", null],
             ["ms", "npm:2.0.0"],
             ["supports-color", null]
           ],
           "packagePeers": [
+            "@types/supports-color",
             "supports-color"
           ],
           "linkType": "HARD",
@@ -3373,10 +3385,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-b810fb6338/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
+            ["@types/supports-color", null],
             ["ms", "npm:2.1.3"],
             ["supports-color", null]
           ],
           "packagePeers": [
+            "@types/supports-color",
             "supports-color"
           ],
           "linkType": "HARD",
@@ -3917,7 +3931,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint-import-resolver-node", "npm:0.3.6"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
-            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"]
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"]
           ],
           "linkType": "HARD",
         }]
@@ -3961,7 +3975,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["object.values", "npm:1.1.4"],
             ["pkg-up", "npm:2.0.0"],
             ["read-pkg-up", "npm:3.0.0"],
-            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["tsconfig-paths", "npm:3.11.0"]
           ],
           "packagePeers": [
@@ -4358,9 +4372,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-4c46e1d6bd/0/cache/follow-redirects-npm-1.14.3-37aea15e53-b4d89339af.zip/node_modules/follow-redirects/",
           "packageDependencies": [
             ["follow-redirects", "virtual:2569322ed65da281e16cb9d2b8e8d22af90abb36fa4376414672fbf6d61aaf22ac6c3a266b47c2252109463dcfbe4f0bb0711852433cd931f1b602f385fa83eb#npm:1.14.3"],
+            ["@types/debug", null],
             ["debug", null]
           ],
           "packagePeers": [
+            "@types/debug",
             "debug"
           ],
           "linkType": "HARD",
@@ -5768,7 +5784,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-pnp-resolver", "virtual:0a39ce63f3e9d05e818c15f1efe0420b27ab4c8f96d30ff7164988e0b6bbafb14584c3d36a9d0342b68d9f5fdaafd7957a09b199b7009da6ec564b450b536dd2#npm:1.2.2"],
             ["jest-util", "npm:27.1.0"],
             ["jest-validate", "npm:27.1.0"],
-            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["slash", "npm:3.0.0"]
           ],
           "linkType": "HARD",
@@ -6937,7 +6953,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["normalize-package-data", "npm:2.5.0"],
             ["hosted-git-info", "npm:2.8.9"],
-            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["semver", "npm:5.7.1"],
             ["validate-npm-package-license", "npm:3.0.4"]
           ],
@@ -7520,9 +7536,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/promise-inflight-virtual-b427a57c8f/0/cache/promise-inflight-npm-1.0.1-5bb925afac-2274948309.zip/node_modules/promise-inflight/",
           "packageDependencies": [
             ["promise-inflight", "virtual:a7e5239c6ae68bf6359adfd3598326db000e94dbb349bc00a3852ed53a31712a0e2e787228c6e859d3e5cf2fbb872aba1ea4abe4995cef8086a77ef619ae1be6#npm:1.0.1"],
+            ["@types/bluebird", null],
             ["bluebird", null]
           ],
           "packagePeers": [
+            "@types/bluebird",
             "bluebird"
           ],
           "linkType": "HARD",
@@ -7953,10 +7971,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["resolve", [
-        ["patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f", {
-          "packageLocation": "./.yarn/cache/resolve-patch-1091fa2a87-028141533a.zip/node_modules/resolve/",
+        ["patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b", {
+          "packageLocation": "./.yarn/cache/resolve-patch-b4a69197d3-a0dd7d16a8.zip/node_modules/resolve/",
           "packageDependencies": [
-            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=d4691f"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["is-core-module", "npm:2.6.0"],
             ["path-parse", "npm:1.0.7"]
           ],
@@ -14156,7 +14174,8 @@ const UNC_PORTABLE_PATH_REGEXP = /^\/unc\/(\.dot\/)?(.*)$/; // Path should look 
 
 function fromPortablePath(p) {
   if (process.platform !== `win32`) return p;
-  if (p.match(PORTABLE_PATH_REGEXP)) p = p.replace(PORTABLE_PATH_REGEXP, `$1`);else if (p.match(UNC_PORTABLE_PATH_REGEXP)) p = p.replace(UNC_PORTABLE_PATH_REGEXP, (match, p1, p2) => `\\\\${p1 ? `.\\` : ``}${p2}`);else return p;
+  let portablePathMatch, uncPortablePathMatch;
+  if (portablePathMatch = p.match(PORTABLE_PATH_REGEXP)) p = portablePathMatch[1];else if (uncPortablePathMatch = p.match(UNC_PORTABLE_PATH_REGEXP)) p = `\\\\${uncPortablePathMatch[1] ? `.\\` : ``}${uncPortablePathMatch[2]}`;else return p;
   return p.replace(/\//g, `\\`);
 } // Path should look like "N:/berry/scripts/plugin-pack.js"
 // And transform to "/N:/berry/scripts/plugin-pack.js"
@@ -14164,7 +14183,8 @@ function fromPortablePath(p) {
 
 function toPortablePath(p) {
   if (process.platform !== `win32`) return p;
-  if (p.match(WINDOWS_PATH_REGEXP)) p = p.replace(WINDOWS_PATH_REGEXP, `/$1`);else if (p.match(UNC_WINDOWS_PATH_REGEXP)) p = p.replace(UNC_WINDOWS_PATH_REGEXP, (match, p1, p2) => `/unc/${p1 ? `.dot/` : ``}${p2}`);
+  let windowsPathMatch, uncWindowsPathMatch;
+  if (windowsPathMatch = p.match(WINDOWS_PATH_REGEXP)) p = `/${windowsPathMatch[1]}`;else if (uncWindowsPathMatch = p.match(UNC_WINDOWS_PATH_REGEXP)) p = `/unc/${uncWindowsPathMatch[1] ? `.dot/` : ``}${uncWindowsPathMatch[2]}`;
   return p.replace(/\\/g, `/`);
 }
 
@@ -14280,9 +14300,17 @@ async function copyFolder(prelayout, postlayout, updateTime, destinationFs, dest
   let updated = false;
 
   if (destinationStat === null) {
-    prelayout.push(async () => destinationFs.mkdirPromise(destination, {
-      mode: sourceStat.mode
-    }));
+    prelayout.push(async () => {
+      try {
+        await destinationFs.mkdirPromise(destination, {
+          mode: sourceStat.mode
+        });
+      } catch (err) {
+        if (err.code !== `EEXIST`) {
+          throw err;
+        }
+      }
+    });
     updated = true;
   }
 
@@ -15733,6 +15761,7 @@ class VirtualFS extends ProxiedFS {
   }
 
   mapToBase(p) {
+    if (p === ``) return p;
     if (this.pathUtils.isAbsolute(p)) return VirtualFS.resolveVirtual(p);
     const resolvedRoot = VirtualFS.resolveVirtual(this.baseFs.resolve(PortablePath.dot));
     const resolvedP = VirtualFS.resolveVirtual(this.baseFs.resolve(p));
@@ -16124,12 +16153,10 @@ class CustomStatWatcher extends external_events_namespaceObject.EventEmitter {
         bigint: this.bigint
       });
     } catch (error) {
-      if (error.code === `ENOENT`) {
-        const statInstance = this.bigint ? new BigIntStatsEntry() : new StatEntry();
-        return clearStats(statInstance);
-      } else {
-        throw error;
-      }
+      // From observation, all errors seem to be mostly ignored by Node.
+      // Checked with ENOENT, ENOTDIR, EPERM
+      const statInstance = this.bigint ? new BigIntStatsEntry() : new StatEntry();
+      return clearStats(statInstance);
     }
   }
   /**
@@ -16563,7 +16590,7 @@ class ZipFS extends BasePortableFakeFS {
     return this.readSync(fd, buffer, offset, length, position);
   }
 
-  readSync(fd, buffer, offset = 0, length = 0, position = -1) {
+  readSync(fd, buffer, offset = 0, length = buffer.byteLength, position = -1) {
     const entry = this.fds.get(fd);
     if (typeof entry === `undefined`) throw EBADF(`read`);
     let realPosition;
@@ -17494,12 +17521,12 @@ class ZipFS extends BasePortableFakeFS {
   }
 
   watchFile(p, a, b) {
-    const resolvedP = this.resolveFilename(`open '${p}'`, p);
+    const resolvedP = ppath.resolve(PortablePath.root, p);
     return watchFile(this, resolvedP, a, b);
   }
 
   unwatchFile(p, cb) {
-    const resolvedP = this.resolveFilename(`open '${p}'`, p);
+    const resolvedP = ppath.resolve(PortablePath.root, p);
     return unwatchFile(this, resolvedP, cb);
   }
 
@@ -17969,7 +17996,7 @@ class ZipOpenFS extends BasePortableFakeFS {
     return this.makeCallSync(oldP, () => {
       return this.makeCallSync(newP, () => {
         return this.baseFs.renameSync(oldP, newP);
-      }, async () => {
+      }, () => {
         throw Object.assign(new Error(`EEXDEV: cross-device link not permitted`), {
           code: `EEXDEV`
         });
@@ -18427,7 +18454,7 @@ class ZipOpenFS extends BasePortableFakeFS {
             this.notZip.add(filePath);
             continue;
           }
-        } catch (_a) {
+        } catch {
           return null;
         }
 
@@ -19008,22 +19035,76 @@ function getIssuerModule(parent) {
 function getPathForDisplay(p) {
   return npath.normalize(npath.fromPortablePath(p));
 }
+;// CONCATENATED MODULE: ./sources/loader/nodeUtils.ts
+
+
+ // @ts-expect-error
+
+const builtinModules = new Set(external_module_.Module.builtinModules || Object.keys(process.binding(`natives`)));
+const isBuiltinModule = request => request.startsWith(`node:`) || builtinModules.has(request); // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L11-L24
+
+function resolveMainPath(main) {
+  let mainPath = external_module_.Module._findPath(npath.resolve(main), null, true);
+
+  if (!mainPath) return false; // const preserveSymlinksMain = getOptionValue(`--preserve-symlinks-main`);
+  // if (!preserveSymlinksMain)
+
+  mainPath = external_fs_default().realpathSync(mainPath);
+  return mainPath;
+} // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L26-L41
+
+function shouldUseESMLoader(mainPath) {
+  // const userLoader = getOptionValue(`--experimental-loader`);
+  // if (userLoader)
+  //   return true;
+  // const esModuleSpecifierResolution =
+  //   getOptionValue(`--experimental-specifier-resolution`);
+  // if (esModuleSpecifierResolution === `node`)
+  //   return true;
+  // Determine the module format of the main
+  if (mainPath && mainPath.endsWith(`.mjs`)) return true;
+  if (!mainPath || mainPath.endsWith(`.cjs`)) return false;
+  const pkg = readPackageScope(mainPath);
+  return pkg && pkg.data.type === `module`;
+} // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L315-L330
+
+function readPackageScope(checkPath) {
+  const rootSeparatorIndex = checkPath.indexOf(npath.sep);
+  let separatorIndex;
+
+  do {
+    separatorIndex = checkPath.lastIndexOf(npath.sep);
+    checkPath = checkPath.slice(0, separatorIndex);
+    if (checkPath.endsWith(`${npath.sep}node_modules`)) return false;
+    const pjson = readPackage(checkPath + npath.sep);
+
+    if (pjson) {
+      return {
+        data: pjson,
+        path: checkPath
+      };
+    }
+  } while (separatorIndex > rootSeparatorIndex);
+
+  return false;
+} // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L284-L313
+
+function readPackage(requestPath) {
+  const jsonPath = npath.resolve(requestPath, `package.json`);
+  if (!external_fs_default().existsSync(jsonPath)) return null;
+  return JSON.parse(external_fs_default().readFileSync(jsonPath, `utf8`));
+}
 ;// CONCATENATED MODULE: ./sources/loader/applyPatch.ts
 
 
 
 
 
-function applyPatch(pnpapi, opts) {
-  // @ts-expect-error
-  const builtinModules = new Set(external_module_.Module.builtinModules || Object.keys(process.binding(`natives`)));
 
-  const isBuiltinModule = request => builtinModules.has(request) || request.startsWith(`node:`);
+function applyPatch(pnpapi, opts) {
   /**
    * The cache that will be used for all accesses occurring outside of a PnP context.
    */
-
-
   const defaultCache = {};
   /**
    * Used to disable the resolution hooks (for when we want to fallback to the previous resolution - we then need
@@ -19291,19 +19372,17 @@ function applyPatch(pnpapi, opts) {
   const originalFindPath = external_module_.Module._findPath;
 
   external_module_.Module._findPath = function (request, paths, isMain) {
-    if (request === `pnpapi`) return false; // Node sometimes call this function with an absolute path and a `null` set
-    // of paths. This would cause the resolution to fail. To avoid that, we
-    // fallback on the regular resolution. We only do this when `isMain` is
-    // true because the Node default resolution doesn't handle well in-zip
-    // paths, even absolute, so we try to use it as little as possible.
+    if (request === `pnpapi`) return false;
+    if (!enableNativeHooks) return originalFindPath.call(external_module_.Module, request, paths, isMain); // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L490-L494
 
-    if (!enableNativeHooks || isMain && npath.isAbsolute(request)) return originalFindPath.call(external_module_.Module, request, paths, isMain);
+    const isAbsolute = npath.isAbsolute(request);
+    if (isAbsolute) paths = [``];else if (!paths || paths.length === 0) return false;
 
-    for (const path of paths || []) {
+    for (const path of paths) {
       let resolution;
 
       try {
-        const pnpApiPath = opts.manager.findApiPathFor(path);
+        const pnpApiPath = opts.manager.findApiPathFor(isAbsolute ? request : path);
 
         if (pnpApiPath !== null) {
           const api = opts.manager.getApiEntry(pnpApiPath, true).instance;
@@ -19321,6 +19400,23 @@ function applyPatch(pnpapi, opts) {
     }
 
     return false;
+  }; // Specifying the `--experimental-loader` flag makes Node enter ESM mode so we change it to not do that
+  // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L72-L81
+  // Tested by https://github.com/yarnpkg/berry/blob/d80ee2dc5298d31eb864288d77671a2264713371/packages/acceptance-tests/pkg-tests-specs/sources/pnp-esm.test.ts#L226-L244
+  // Upstream issue https://github.com/nodejs/node/issues/33226
+
+
+  const originalRunMain = moduleExports.runMain;
+
+  moduleExports.runMain = function (main = process.argv[1]) {
+    const resolvedMain = resolveMainPath(main);
+    const useESMLoader = resolvedMain ? shouldUseESMLoader(resolvedMain) : false;
+
+    if (useESMLoader) {
+      originalRunMain(main);
+    } else {
+      external_module_.Module._load(main, null, true);
+    }
   };
 
   patchFs((external_fs_default()), new PosixFS(opts.fakeFs));
@@ -19396,7 +19492,7 @@ function hydrateRuntimeState(data, {
     packageRegistry
   };
 }
-;// CONCATENATED MODULE: ../../.yarn/cache/resolve.exports-npm-1.0.2-bbb8d62ef6-1de1e50dc6.zip/node_modules/resolve.exports/dist/index.mjs
+;// CONCATENATED MODULE: ../../.yarn/cache/resolve.exports-npm-1.1.0-81756e03ba-52865af8ed.zip/node_modules/resolve.exports/dist/index.mjs
 /**
  * @param {object} exports
  * @param {Set<string>} keys
@@ -19452,12 +19548,13 @@ function toName(name, entry) {
  * @param {boolean} [options.browser]
  * @param {boolean} [options.require]
  * @param {string[]} [options.conditions]
+ * @param {boolean} [options.unsafe]
  */
 function resolve(pkg, entry='.', options={}) {
 	let { name, exports } = pkg;
 
 	if (exports) {
-		let { browser, require, conditions=[] } = options;
+		let { browser, require, unsafe, conditions=[] } = options;
 
 		let target = toName(name, entry);
 		if (target[0] !== '.') target = './' + target;
@@ -19467,8 +19564,8 @@ function resolve(pkg, entry='.', options={}) {
 		}
 
 		let allows = new Set(['default', ...conditions]);
-		allows.add(require ? 'require' : 'import');
-		allows.add(browser ? 'browser' : 'node');
+		unsafe || allows.add(require ? 'require' : 'import');
+		unsafe || allows.add(browser ? 'browser' : 'node');
 
 		let key, tmp, isSingle=false;
 
@@ -19725,14 +19822,15 @@ function makeApi(runtimeState, opts) {
 
     return false;
   }
+
+  const defaultExportsConditions = new Set([`default`, `node`, `require`]);
   /**
    * Implements the node resolution for the "exports" field
    *
    * @returns The remapped path or `null` if the package doesn't have a package.json or an "exports" field
    */
 
-
-  function applyNodeExportsResolution(unqualifiedPath) {
+  function applyNodeExportsResolution(unqualifiedPath, conditions = defaultExportsConditions) {
     const locator = findPackageLocator(ppath.join(unqualifiedPath, `internal.js`), {
       resolveIgnored: true,
       includeDiscardFromLookup: true
@@ -19756,11 +19854,11 @@ function makeApi(runtimeState, opts) {
 
     if (!isRelativeRegexp.test(subpath)) subpath = `./${subpath}`;
     const resolvedExport = resolve(pkgJson, ppath.normalize(subpath), {
-      browser: false,
-      require: true,
       // TODO: implement support for the --conditions flag
       // Waiting on https://github.com/nodejs/node/issues/36935
-      conditions: []
+      // @ts-expect-error - Type should be Iterable<string>
+      conditions,
+      unsafe: true
     });
     if (typeof resolvedExport === `string`) return ppath.join(packageLocation, resolvedExport);
     return null;
@@ -20265,10 +20363,10 @@ function makeApi(runtimeState, opts) {
     return ppath.normalize(unqualifiedPath);
   }
 
-  function resolveUnqualifiedExport(request, unqualifiedPath) {
+  function resolveUnqualifiedExport(request, unqualifiedPath, conditions = defaultExportsConditions) {
     // "exports" only apply when requiring a package, not when requiring via an absolute / relative path
     if (isStrictRegExp.test(request)) return unqualifiedPath;
-    const unqualifiedExportPath = applyNodeExportsResolution(unqualifiedPath);
+    const unqualifiedExportPath = applyNodeExportsResolution(unqualifiedPath, conditions);
 
     if (unqualifiedExportPath) {
       return ppath.normalize(unqualifiedExportPath);
@@ -20325,16 +20423,21 @@ function makeApi(runtimeState, opts) {
 
   function resolveRequest(request, issuer, {
     considerBuiltins,
-    extensions
+    extensions,
+    conditions
   } = {}) {
     const unqualifiedPath = resolveToUnqualified(request, issuer, {
       considerBuiltins
-    });
+    }); // If the request is the pnpapi, we can just return the unqualifiedPath
+    // without having to apply the exports resolution or the extension resolution
+    // (opts.pnpapiResolution is always a full path - makeManager enforces this by stat-ing it)
+
+    if (request === `pnpapi`) return unqualifiedPath;
     if (unqualifiedPath === null) return null;
 
     const isIssuerIgnored = () => issuer !== null ? isPathIgnored(issuer) : false;
 
-    const remappedPath = (!considerBuiltins || !isBuiltinModule(request)) && !isIssuerIgnored() ? resolveUnqualifiedExport(request, unqualifiedPath) : unqualifiedPath;
+    const remappedPath = (!considerBuiltins || !isBuiltinModule(request)) && !isIssuerIgnored() ? resolveUnqualifiedExport(request, unqualifiedPath, conditions) : unqualifiedPath;
 
     try {
       return resolveUnqualified(remappedPath, {
@@ -20596,9 +20699,27 @@ const defaultFsLayer = new VirtualFS({
     readOnlyArchives: true
   })
 });
+
+class DynamicFS extends ProxiedFS {
+  constructor() {
+    super(ppath);
+    this.baseFs = defaultFsLayer;
+  }
+
+  mapToBase(p) {
+    return p;
+  }
+
+  mapFromBase(p) {
+    return p;
+  }
+
+}
+
+const dynamicFsLayer = new DynamicFS();
 let manager;
 const defaultApi = Object.assign(makeApi(defaultRuntimeState, {
-  fakeFs: defaultFsLayer,
+  fakeFs: dynamicFsLayer,
   pnpapiResolution: defaultPnpapiResolution
 }), {
   /**
@@ -20608,7 +20729,7 @@ const defaultApi = Object.assign(makeApi(defaultRuntimeState, {
    */
   makeApi: ({
     basePath = undefined,
-    fakeFs = defaultFsLayer,
+    fakeFs = dynamicFsLayer,
     pnpapiResolution = defaultPnpapiResolution,
     ...rest
   }) => {
@@ -20628,11 +20749,15 @@ const defaultApi = Object.assign(makeApi(defaultRuntimeState, {
     applyPatch(api || defaultApi, {
       fakeFs: defaultFsLayer,
       manager
-    });
+    }); // Now that the `fs` module is patched we can swap the `baseFs` to
+    // a NodeFS with a live `fs` binding to pick up changes to the `fs`
+    // module allowing users to patch it
+
+    dynamicFsLayer.baseFs = new NodeFS((external_fs_default()));
   }
 });
 manager = makeManager(defaultApi, {
-  fakeFs: defaultFsLayer
+  fakeFs: dynamicFsLayer
 }); // eslint-disable-next-line arca/no-default-export
 
 /* harmony default export */ const _entryPoint = (defaultApi);
