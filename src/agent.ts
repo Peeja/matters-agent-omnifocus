@@ -5,6 +5,8 @@ import { clone, uuid } from "@m-ld/m-ld";
 import { IoRemotes, MeldIoConfig } from "@m-ld/m-ld/dist/socket.io";
 
 const SINGLE_VALUED = [
+  "http://peeja.com/purl/matters/omnifocus/o/name",
+  "http://peeja.com/purl/matters/omnifocus/o/note",
   "http://peeja.com/purl/matters/omnifocus/o/added",
   "http://peeja.com/purl/matters/omnifocus/o/modified",
   "http://peeja.com/purl/matters/omnifocus/o/completed",

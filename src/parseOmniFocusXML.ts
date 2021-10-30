@@ -16,6 +16,12 @@ mappings:
 
     subjects: "omnifocus:task/$(./@id)"
     predicateobjects:
+      - predicates: omnifocus:o/name
+        objects:
+          value: "$(./name)"
+      - predicates: omnifocus:o/note
+        objects:
+          value: "$(./note)"
       - predicates: omnifocus:o/added
         objects:
           value: "$(./added)"

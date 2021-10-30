@@ -184,4 +184,36 @@ describe("upsert()", () => {
       },
     ]);
   });
+
+  it("simply inserts subjects without an @id", async () => {
+    const meld = await testClone({
+      "@id": "foo",
+      aProperty: "existing-value",
+      anotherProperty: "another-existing-value",
+    });
+
+    await meld.write(
+      upsert(
+        [
+          {
+            aProperty: "new-value",
+            anotherProperty: "another-new-value",
+          },
+        ],
+        ["aProperty"],
+      ),
+    );
+
+    expect(await readAll(meld)).toMatchObject([
+      {
+        aProperty: "new-value",
+        anotherProperty: "another-new-value",
+      },
+      {
+        "@id": "foo",
+        aProperty: "existing-value",
+        anotherProperty: "another-existing-value",
+      },
+    ]);
+  });
 });
