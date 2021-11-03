@@ -35,16 +35,19 @@ export const upsert =
             (key) => key != "@id" && singleValuedProperties.includes(key),
           );
 
-          const pattern: Subject = {
+          const pattern = {
             "@id": subject["@id"],
-            ...Object.fromEntries(
-              keysToOverwrite.map((key) => [key, "?value"]),
-            ),
+            "?property": "?value",
           };
 
           return state.read<Construct>({
             "@construct": pattern,
-            "@where": pattern,
+            "@where": {
+              "@graph": pattern,
+              "@values": keysToOverwrite.map((key) => ({
+                "?property": { "@vocab": key },
+              })),
+            },
           });
         }),
       )

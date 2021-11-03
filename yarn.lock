@@ -5292,6 +5292,7 @@ __metadata:
     express: ^4.17.1
     jest: ^27.1.0
     jest-mock-extended: ^2.0.4
+    json-rql: ^0.6.1
     jszip: ^3.7.1
     lodash: ^4.17.21
     memdown: ^6.0.0

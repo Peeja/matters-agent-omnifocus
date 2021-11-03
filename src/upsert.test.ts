@@ -216,4 +216,35 @@ describe("upsert()", () => {
       },
     ]);
   });
+
+  // This test exercises a pitfall in the logic, where the read to get the
+  // existing data can fail if the pattern requires every property to have a
+  // value.
+  it("works even if not every value exists already", async () => {
+    const meld = await testClone({
+      "@id": "foo",
+      aProperty: "existing-value",
+    });
+
+    await meld.write(
+      upsert(
+        [
+          {
+            "@id": "foo",
+            aProperty: "new-value",
+            anotherProperty: "another-new-value",
+          },
+        ],
+        ["aProperty", "anotherProperty"],
+      ),
+    );
+
+    expect(await readAll(meld)).toEqual([
+      {
+        "@id": "foo",
+        aProperty: "new-value",
+        anotherProperty: "another-new-value",
+      },
+    ]);
+  });
 });
